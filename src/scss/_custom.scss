@@ -1,0 +1,203 @@
+// Here you can add other styles
+.form-group{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+}
+
+.CIon{
+    width: 20px;
+}
+.register_title{
+    padding-left: 2rem;
+    padding-top: 3rem;
+    
+}
+
+.social_btn{
+    border-top: solid 1px rgb(155, 155, 155);
+    position: relative;
+
+    padding: 1rem ;
+    margin-bottom: 1rem;
+    
+
+    &_fb{
+        background-color: #1877f2;
+        color: white;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        width: 150px;
+        float: left;
+    }
+
+    &_twi{
+        background-color: #00acee;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: 150px;
+        float: right;
+    }
+
+}
+
+
+
+.Login-item{
+    position: absolute;
+    justify-content: center;
+    background-color: white;
+    border-radius: 0.25rem;
+        border: 1px solid transparent;
+        padding: 0.375rem 2rem 0.5rem;
+        width: 27rem;
+
+    
+
+    &_left{
+        float: left;
+        width: 8rem;
+        background-color: #39f;
+        color: white;
+        border-radius: 0.25rem;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+
+        text-align: center;
+        vertical-align: middle;
+
+    }
+
+    &_right{
+        float: right;
+        font-size: 0.875rem;
+        
+
+
+    }
+}
+
+.login-container{
+    padding-left: 2rem;
+}
+
+.SignUp{
+    // left: 27rem;
+    width: 20rem ;
+    height: 20.1rem;
+    background-color: #39f;
+    float: left;
+
+
+    border: 1px solid rgb(225, 225, 225);
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+        border-radius: 0.25rem ;
+        left: 27rem;
+
+        text-align: center;
+        vertical-align: middle;
+
+    &_h2{
+        color: white;
+    }
+
+    &_container{
+        top: 3rem;
+        padding-top: 3rem;
+    }
+
+    &_p{
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        color: white;
+
+    }
+
+    &_a{
+        padding-top: 2rem;
+        color: white;
+    }
+    
+}
+
+
+.login_float{
+    position: absolute;
+    justify-content: center;
+    right: 3rem;
+    grid-gap: 1px;
+    right: 10rem;
+    top: 3rem;
+
+}
+
+.signin-section{
+    background-color: white;
+    width: 27rem;
+    float: left;
+}
+
+
+.login-input{
+    display: block;
+    width: 90%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-clip: padding-box;
+    border: 1px solid;
+    color: #768192;
+    background-color: #fff;
+    border-color: #d8dbe0;
+    border-radius: 0 4px 4px 0;
+}
+
+.icon {
+    width: 25px;
+    height: 35px;
+    float: left;
+    align-items: center;
+    background-color: rgb(172, 172, 172);
+    
+    border-radius: 5px 0 0 5px;
+}
+
+.icon_icon{
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+
+.register-section{
+    position: absolute;
+    width: 40rem;
+    background-color: white;
+    justify-content:center;
+    top: 3rem;
+    left: 24rem;
+    
+
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 35%;
+
+    border: 1px solid rgb(225, 225, 225);
+    padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+        border-radius: 0.25rem ;
+}
+
+.category{
+    position: absolute;
+    width: 20rem;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    top: 3rem;
+    left: 30rem;
+
+}

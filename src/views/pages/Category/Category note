@@ -1,0 +1,40 @@
+1.  Create new table named category in the mysql with following fields; Id, type, name. 
+Id: auto increment
+Type: value (  ) dropdown list          (done)
+Name : character with length of 100.       (done)
+
+2. Create new menu called , create category
+3. Create web page with form to store into above category table.
+
+
+i need a table contain 
+
+ID
+type(0 - Shop, 1 - for Product) drop down list
+
+name( max length 100 )
+
+
+
+
+
+
+css
+backgroud
+backgroud-accent
+text-color
+nav-size
+border
+border-radius
+speed
+
+ul
+list-style: none;
+margin: 0;
+padding: 0;
+
+a
+color:
+text-decoration:
+
+
