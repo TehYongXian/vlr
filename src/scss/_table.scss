@@ -1,0 +1,39 @@
+.page-table{
+    justify-content: center;
+    display:grid;
+    padding: 2rem;
+    margin: auto;
+}
+
+.catData{
+    background-color: blueviolet;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.tableHead{
+    background-color:rgb(5, 152, 175);
+    // border:1px solid black;
+    padding:5px;
+}
+
+.tr{
+    width:150px;
+    text-align:center;
+    border:1px solid rgb(255, 0, 0);
+    padding:5px;
+}
+
+.th, td{
+    width:150px;
+    text-align:center;
+    border:1px solid black;
+    padding:5px;
+    text-align:left;
+}
+
+.Page-Link{
+    padding-top: 0.5rem;
+}
