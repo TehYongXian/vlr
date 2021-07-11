@@ -18,7 +18,7 @@ const Page404 = React.lazy(() => import('./views/pages/page404/Page404'));
 const Page500 = React.lazy(() => import('./views/pages/page500/Page500'));
 const Category = React.lazy(() => import('./views/pages/Category/Category'));
 const ShowCategory = React.lazy(() => import('./views/pages/showCategory/ShowCategory'));
-const CateogryList = React.lazy(() => import('./views/pages/showCategory/component/CategoryList'));
+const TestShow = React.lazy(() => import('./views/pages/showCategory/testPagePagination.js'));
 
 class App extends Component {
 
@@ -33,7 +33,7 @@ class App extends Component {
               <Route exact path="/500" name="Page 500" render={props => <Page500 {...props}/>} />
               <Route exact path="/Category" name="Category" render={props => <Category {...props}/>} />
               <Route exact path="/showCategory" name="ShowCategory" render={props => <ShowCategory {...props}/>} />
-              <Route exact path="/CateogryList" name="CateogryList" render={props => <CateogryList {...props}/>} />
+              <Route exact path="/TestShow" name="TestShow" render={props => <TestShow {...props}/>} />
               <Route path="/" name="Home" render={props => <TheLayout {...props}/>} />
             </Switch>
           </React.Suspense>

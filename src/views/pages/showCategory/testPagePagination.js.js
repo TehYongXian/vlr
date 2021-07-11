@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect, useMemo } from "react";
 import AuthService from "../../../services/auth.service";
-import { Link } from 'react-router-dom';
+import { HashRouter, Route, Switch, Link } from 'react-router-dom';
 // import { useGlobalFilter, useTable } from 'react-table'
 import { useTable, usePagination } from "react-table";
 import Pagination from '../showCategory/component/Pagination'
@@ -91,13 +91,17 @@ export default class Profile extends Component {
 
             
           
-a
+
           { this.state.totalResults > 10 ?  <Pagination pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage} /> : ''}
-            
+            <ul>
+              <li>Next</li>
+              <li>Previous</li>
+            </ul>
 
 
             <div className="Page-Link">
             <Link to="/">Home</Link>
+              
             </div>
         </div>
       </div>

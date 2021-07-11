@@ -53,6 +53,10 @@ class AuthService {
     getCategory(search = '') {
         return axios.get(API_URL + `categories?search=${search}`)
     }
+
+    nextPage = (pageNumber) => {
+        return axios.get(API_URL + `categories?page=${pageNumber}`)
+    }
 }
 
 export default new AuthService();
