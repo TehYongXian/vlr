@@ -137,8 +137,9 @@ return (
                 validations={[required, itemName]}
                 />
                 <div className="category-select">
-                <h6>Type:</h6>
+                <h6 className="category-select_h6">Type:  </h6>
                 <select
+                className="categoryType-select"
                 name="categoryType"
                 value={this.state.categoryType}
                 onChange={this.onChangeType}
@@ -157,7 +158,7 @@ return (
 
 
                 <div className="form-group ">
-                    <button className="btn btn-block category-btn">
+                    <button className="btn btn-block category-btn submit">
                         Submit
                     </button>
                 </div>

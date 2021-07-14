@@ -5,16 +5,16 @@
     margin: auto;
 }
 
-.catData{
-    background-color: blueviolet;
-}
+// .catData{
+
+// }
 
 table {
     border-collapse: collapse;
 }
 
 .tableHead{
-    background-color:rgb(5, 152, 175);
+    background-color:#6c7ac9;
     // border:1px solid black;
     padding:5px;
 }
@@ -24,6 +24,14 @@ table {
     text-align:center;
     border:1px solid rgb(255, 0, 0);
     padding:5px;
+}
+
+.thead, th{
+    width:150px;
+    text-align:center;
+    border:1px solid black;
+    padding:5px;
+    text-align:left;
 }
 
 .th, td{
@@ -37,3 +45,15 @@ table {
 .Page-Link{
     padding-top: 0.5rem;
 }
+
+.header{
+    display: flex;
+    position: relative;
+
+    &_add-btn{
+    float: right;
+    padding: 10px;
+    border-radius: 5px;
+    }
+}
+

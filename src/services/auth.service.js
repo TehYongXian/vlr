@@ -50,11 +50,12 @@ class AuthService {
         })
     }
 
-    getCategory(search = '') {
-        return axios.get(API_URL + `categories?search=${search}`)
+    getCategory(search = '', page = 1, perPage = 5) {
+        return axios.get(API_URL + `categories?search=${search}&page=${page}&per_page=${perPage}`)
     }
 
     nextPage = (pageNumber) => {
+        console.log("anyone?")
         return axios.get(API_URL + `categories?page=${pageNumber}`)
     }
 }

@@ -83,8 +83,8 @@ const routes = [
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
 
-  { path: '/Category', exact: true, name: 'Category', component: User },
-  { path: '/showCategory', exact: true, name: 'Show Category', component: User },
+  { path: '/Category', exact: true, name: 'Category', component: Category },
+  { path: '/showCategory', exact: true, name: 'Show Category', component: ShowCategory },
 
 ];
 

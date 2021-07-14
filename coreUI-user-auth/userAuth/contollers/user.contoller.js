@@ -34,7 +34,7 @@ exports.catBoard = (req, res) => {
 exports.getCategories = async (req, res) => {
     const search = req.query.search
     const page = req.query.page ?? 1
-    const limit = 5
+    const limit = Number(req.query.per_page)
     const offset = (page - 1) * limit
 
     const total = await Cat.count({
@@ -71,6 +71,7 @@ exports.getCategories = async (req, res) => {
             total,
             current_page: page,
             per_page: limit,
+            last_page: Math.ceil(total / limit),
         }
     })
 }

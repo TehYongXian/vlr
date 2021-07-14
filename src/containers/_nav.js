@@ -255,11 +255,6 @@ const _nav =  [
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'Category',
-        to: '/category',
-      },
-      {
-        _tag: 'CSidebarNavItem',
         name: 'ShowCategory',
         to: '/showCategory',
       },

@@ -1,3 +1,6 @@
-Search function
-paging function
-show size function
+1.create a view function that will popup the view
+2.user Search the ID number
+3.after submit auto refresh the table
+4. after delete auto refresh the table
+
+make all new function as a popup window
