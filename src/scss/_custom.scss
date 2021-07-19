@@ -194,7 +194,8 @@
 .category{
     // position: absolute;
     display: flex;
-    width: 20rem;
+    width: 22rem;
+    height: 15rem;
     margin: auto;
     background-color: white;
     justify-content: center;
@@ -208,6 +209,8 @@
     &_h6{
         float: right;
     }
+
+    margin-top: 5px;
 }
 
 .categoryType-select{

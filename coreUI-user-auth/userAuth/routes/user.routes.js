@@ -43,4 +43,9 @@ module.exports = function(app) {
         "/api/auth/categories",
         controller.getCategories
     )
+
+    app.delete(
+        "/api/auth/categories/:id",
+        controller.deleteCategory
+    )
 };

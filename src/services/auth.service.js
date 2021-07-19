@@ -1,5 +1,4 @@
 import axios from "axios";
-
 const API_URL = "http://localhost:3010/api/auth/";
 
 class AuthService {
@@ -53,11 +52,14 @@ class AuthService {
     getCategory(search = '', page = 1, perPage = 5) {
         return axios.get(API_URL + `categories?search=${search}&page=${page}&per_page=${perPage}`)
     }
-
-    nextPage = (pageNumber) => {
-        console.log("anyone?")
-        return axios.get(API_URL + `categories?page=${pageNumber}`)
+    
+    // when press delete it will detact the ID, and delete the correct ID slot from the database.
+    // after delete refresh the client site table to view the latest data that need to be show.
+    deleteCat(categoryId) {
+        return axios 
+            .delete(API_URL + `categories/${categoryId}`)
     }
+
 }
 
 export default new AuthService();

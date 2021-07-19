@@ -1,15 +1,10 @@
-import React, { Component, useState, useEffect, useMemo } from "react";
+import React, { Component } from "react";
 import AuthService from "../../../services/auth.service";
 import { HashRouter, Route, Switch, Link } from 'react-router-dom';
-import ReactPaginate from "react-paginate"
-import { 
-  CModal,
-  CModalHeader,
-  CModalTitle,
-  CModalBody,
-  CModalFooter,
-  CButton
-} from "@coreui/react";
+import ReactPaginate from "react-paginate";
+
+import CatModal from "../showCategory/component/CatModal";
+import Popup from 'reactjs-popup';
 
 export default class Profile extends Component {
 
@@ -25,13 +20,13 @@ export default class Profile extends Component {
 
     this.onSearch = this.onSearch.bind(this);
     this.getCategories = this.getCategories.bind(this)
+    this.handleDeleteData = this.handleDeleteData.bind(this)
   }
 
   getCategories(search = '', page = 1) {
     AuthService.getCategory(search, page, this.state.per_page)
       .then(res => {
         const categories= res.data.data
-
         this.setState({
           categories,
           pagination: res.data.pagination,
@@ -46,25 +41,31 @@ export default class Profile extends Component {
   onSearch(e) {
     const search = e.target.value;
     this.setState({ search });
-
     this.getCategories(search)
   }
 
   handlePageClick(data) {
     const page = data.selected + 1;
-
     this.getCategories(this.state.search, page)
   }
 
   handlePageSize(e) {
     this.state.per_page = e.target.value
-
     this.handlePageClick({ selected: 0 })
+  }
+
+  handleDeleteData(event) {
+    if(window.confirm('Are you sure you want to delete?')) {
+      AuthService.deleteCat(event.target.value)
+        .then(res => {
+          this.getCategories()
+        })
+    }
   }
 
   render() {
     const categories = this.state.categories;
-    const pagination = this.state.pagination
+    const pagination = this.state.pagination;
 
     return (
       <div className="Table">
@@ -74,27 +75,14 @@ export default class Profile extends Component {
             <div className="header">
             <h2>Category List</h2>
 
+              <div className="catPopUp">
 
+              <CatModal/>
 
-              <Link to={"/Category"}><button className="header_add-btn" >ADD</button></Link>
-              <CModal
-              className="show d-block position-static"
-              backdrop={false}
-              keyboard={false}
-              portal={false}
-              visible 
-              >
-<CModalHeader>
-    <CModalTitle>Modal title</CModalTitle>
-  </CModalHeader>
-  <CModalBody>Modal body text goes here.</CModalBody>
-  <CModalFooter>
-    <CButton color="secondary">Close</CButton>
-    <CButton color="primary">Save changes</CButton>
-  </CModalFooter>
-</CModal>
-             
+              </div>
+
           </div>
+
 
             <div className="catFunction-Top">
             <select
@@ -132,8 +120,24 @@ export default class Profile extends Component {
                 <td>{category.id}</td>
                 <td>{category.name}</td>
                 <td>{category.categoryType}</td>
-                <button>View</button>
-                <button>Delete</button>
+                <td>
+
+                <Popup trigger={<button className="ActionBtnView"> View</button>} position="left center">
+                <p>ID: {category.id}</p>
+                <p>Category Name: {category.name}</p>
+                <p>Category Type: {category.categoryType}</p>
+                </Popup>
+
+                <button 
+                  onClick={this.handleDeleteData}
+                  value={category.id}
+                  className="ActionBtnDelete"
+                  >   Delete
+
+                </button>
+
+                </td>
+             
               </tr>
             )}
             

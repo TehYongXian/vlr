@@ -6,8 +6,6 @@ import CheckButton from "react-validation/build/button";
 import AuthService from "../../../services/auth.service";
 
 import CIcon from '@coreui/icons-react';
-import Register from "../../../views/pages/register/Register"
-import {Link} from "react";
 
 const required = value => {
   if (!value) {

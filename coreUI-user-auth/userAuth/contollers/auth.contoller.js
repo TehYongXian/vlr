@@ -118,14 +118,8 @@ exports.categoryCreate = (req, res) => {
     });
 };
 
-// exports.categoryGetID = (req, res) => {
-//     var showId = [];
-//     ID.getid().then(Cat => {
-//         for (let i = 0; i < id.length; i++) {
-//             showId.push("ID_" + Cat[i].id.toString())
-//         }
-//         res.status(200).send({
-//             id: 
-//         })
-//     })
-// }
+
+
+
+
+

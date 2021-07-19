@@ -31,6 +31,16 @@ exports.catBoard = (req, res) => {
     });
 };
 
+exports.deleteCategory = async (req, res) => {
+    const result = await Cat.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+
+    res.send({ result })
+}
+
 exports.getCategories = async (req, res) => {
     const search = req.query.search
     const page = req.query.page ?? 1

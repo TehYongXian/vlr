@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-import Dropdown from "./CategoryComponent/dropDownList";
+
 // import Select from "raect-select";
 
 import AuthService from "../../../services/auth.service";
+// import Modal from
 
 const required = value => {
     if (!value) {
@@ -27,18 +28,7 @@ const required = value => {
     }
   }
 
-  const items = [
-      {
-          id: 0,
-          value: "Shop",
-    },
-      {
-          id: 1,
-          value: 'Product',
-          
-    },
-  ];
-
+  // export default function Modal()
 
 export default class Category extends Component {
     constructor(props) {
@@ -112,6 +102,7 @@ export default class Category extends Component {
 
         
 render() {
+  
 return ( 
     <div className="category">
             <Form
@@ -187,6 +178,8 @@ return (
 
             </Form>
         </div>
-        )
-    }
+)
+
+    
+  }
 }
