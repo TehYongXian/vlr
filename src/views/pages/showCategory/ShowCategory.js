@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import AuthService from "../../../services/auth.service";
-import { HashRouter, Route, Switch, Link } from 'react-router-dom';
+// import { HashRouter, Route, Switch, Link } from 'react-router-dom';
 import ReactPaginate from "react-paginate";
 
 import CatModal from "../showCategory/component/CatModal";
 import Popup from 'reactjs-popup';
+import EditFunction from "./component/EditFunction";
 
 export default class Profile extends Component {
 
@@ -108,24 +109,42 @@ export default class Profile extends Component {
           <>
           <table>
           <thead className="tableHead">
-            <th>Id:</th>
+            <th className="th_id">Id:</th>
             <th>Name:</th>
-            <th>CategoryType:</th>
-            <th>Action</th>
+            <th>Category Type:</th>
+            <th className="action_th">Action</th>
           </thead>
 
           <tbody>
             {categories.map(category =>
               <tr className="catData" key={category.id}>
-                <td>{category.id}</td>
+                <td className="td_id">{category.id}</td>
                 <td>{category.name}</td>
                 <td>{category.categoryType}</td>
                 <td>
 
-                <Popup trigger={<button className="ActionBtnView"> View</button>} position="left center">
+                <Popup trigger={<button className="ActionBtnView"> View</button>} position="left center" className="view-popup">
                 <p>ID: {category.id}</p>
-                <p>Category Name: {category.name}</p>
+                <p>Name: {category.name}</p>
                 <p>Category Type: {category.categoryType}</p>
+                </Popup>
+
+                {/* <button className="edit-popupBtn">
+                  Edit
+                </button> */}
+                {/* <EditFunction/> */}
+
+                <Popup className="CatModal" trigger={<button className="edit-popupBtn"> Edit </button>} position="left center" >
+                {close => (
+                    <div>
+                    <button className="close" onClick={close}>
+                        &times;
+                    </button>
+
+                    <EditFunction/>
+                    
+                    </div>
+                )}
                 </Popup>
 
                 <button 
@@ -133,8 +152,9 @@ export default class Profile extends Component {
                   value={category.id}
                   className="ActionBtnDelete"
                   >   Delete
-
                 </button>
+
+                
 
                 </td>
              

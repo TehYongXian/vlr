@@ -39,7 +39,7 @@ class AuthService {
         return JSON.parse(localStorage.getItem('user'));
     }
 
-    //category service
+    //add category service
     update(categoryName, categoryType) {
         console.log("updateCategory")
         return axios
@@ -59,6 +59,15 @@ class AuthService {
         return axios 
             .delete(API_URL + `categories/${categoryId}`)
     }
+
+    // editCat(categoryId, categoryName, categoryType) {
+    //     console.log("edit category")
+    //     return axios
+    //         .post(API_URL + `categories/${categoryId}`, {
+    //             categoryName,
+    //             categoryType
+    //         })
+    // }
 
 }
 

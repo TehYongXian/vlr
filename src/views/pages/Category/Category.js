@@ -137,7 +137,6 @@ return (
                 validations={[required]}
                 required
                 >
-                  <option value="">Choose</option>
                   <option value="Shop">
                     Shop
                   </option>

@@ -32,6 +32,7 @@ table {
     border:1px solid black;
     padding:5px;
     text-align:left;
+    color: blanchedalmond;
 }
 
 .th, td{
@@ -40,6 +41,14 @@ table {
     border:1px solid black;
     padding:5px;
     text-align:left;
+
+}
+
+.th_id{
+    width: 2.5rem;
+}
+.td_id{
+    width: 2.5rem;
 }
 
 .Page-Link{
@@ -57,22 +66,6 @@ table {
     }
 }
 
-.ActionBtnDelete{
-    border-radius: 0.25rem;
-        border: 1px solid red;
-        padding: 0.375rem 0.75rem;
-        font-size: 0.875rem;
-        vertical-align: middle;
-        color: red;
-        margin-left: 5px;
+.action_th{
+    width: 200px;
 }
-
-// .ActionBtnView{
-//     border-radius: 0.25rem;
-//         border: 1px solid red;
-//         padding: 0.375rem 0.75rem;
-//         font-size: 0.875rem;
-//         vertical-align: middle;
-//         color: red;
-//         margin-left: 5px;
-// }
