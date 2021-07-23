@@ -41,6 +41,19 @@ exports.deleteCategory = async (req, res) => {
     res.send({ result })
 }
 
+exports.editCategory = async (req, res) => {
+    const result = await Cat.update({
+        name: req.body.categoryName,
+        categoryType: req.body.categoryType
+    }, {
+        where: {
+          id: req.params.id
+        }
+    })
+
+    res.send({ result })
+}
+
 exports.getCategories = async (req, res) => {
     const search = req.query.search
     const page = req.query.page ?? 1

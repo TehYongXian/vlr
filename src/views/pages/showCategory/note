@@ -4,3 +4,52 @@
 4. after delete auto refresh the table
 
 make all new function as a popup window
+
+
+
+
+
+
+
+
+
+<div>
+                       {/* <EditFunction/> */}
+                    <h1>Edit informations</h1>
+                    <input
+                    type="text"
+                    className="category-input"
+                    value={category.id}
+                    />
+                    <input 
+                    type="text"
+                    className="category-input"
+                    name="categoryName"
+                    value={category.name}
+                    onChange={this.handleEditName}
+                    validations={[required, itemName]}
+                    />
+                    
+                    <select
+                        className="categoryType-select"
+                        name="categoryType"
+                        value={this.state.categoryType}
+                        // onChange={this.onChangeType}
+                        validations={[required]}
+                        required
+                        >
+                        <option value="Shop">
+                            Shop
+                        </option>
+                        <option value="product">
+                            Product
+                        </option>
+                    </select>
+
+                    <div className="form-group ">
+                        <button className="btn btn-block " >
+                            Submit
+                        </button>
+                        
+                    </div>
+                    </div>

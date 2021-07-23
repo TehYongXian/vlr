@@ -28,7 +28,6 @@ app.get("/", (req, res) => {
 
 require('./userAuth/routes/auth.routes')(app);
 require('./userAuth/routes/user.routes')(app);
-//require('./userAuth/routes/category.routes')(app);
 
 const PORT = process.env.PORT || 3010;
 app.listen(PORT, () => {
