@@ -258,6 +258,11 @@ const _nav =  [
         name: 'ShowCategory',
         to: '/showCategory',
       },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'GeneralRegistration',
+        to: '/GeneralRegistration',
+      },
     ],
   },
   {

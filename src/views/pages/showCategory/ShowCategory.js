@@ -114,12 +114,12 @@ export default class Profile extends Component {
 
     this.form.validateAll();
 
-    if (window.alert('Update Done!')) {
+    // if (window.alert('Update Done!')) {
     AuthService.editCat(id, name, type)
       .then(response => {
         this.getCategories()
       })
-    }
+    // }
   }
 
 
