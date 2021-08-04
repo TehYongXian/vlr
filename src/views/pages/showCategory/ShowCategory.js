@@ -8,6 +8,7 @@ import Popup from 'reactjs-popup';
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
+import GeneralData from "../GeneralRegistration/component/GeneralData/GeneralData";
 
 import Select from 'react-select';
 
@@ -132,6 +133,7 @@ export default class Profile extends Component {
 
     return (
       <div className="Table">
+        
         <div className="page-table">
 
           <div>
@@ -277,12 +279,9 @@ export default class Profile extends Component {
                                   this.checkBtn = c;
                                 }}
                               />
-
-
-
                             </Form>
 
-
+                            <GeneralData/>
 
                           </div>
                         )}

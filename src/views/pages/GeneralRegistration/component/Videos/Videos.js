@@ -1,18 +1,17 @@
 import { Pagination } from '@material-ui/lab';
 import React from 'react'
-import NavBar from '../NavBar/NavBar';
+import NavTab from "../NavTab/NavTab";
 
 const Videos = () => {
     return (
         <>
-            <NavBar />
             <div>
                 <h2>Add Video</h2>
             </div>
             <div className="video">
                 <h3 className="video_title">Add Video</h3>
                 <div className="video_container">
-                    <h4>At this time only videos hosted on YouTube.com can be posted yo your profile and on the pages of the FPP events you attend.</h4>
+                    <p>At this time only videos hosted on YouTube.com can be posted yo your profile and on the pages of the FPP events you attend.</p>
                     <div className="video_section1">
                         <div className="video_section1-1">
                             <p>Title</p>
@@ -30,12 +29,12 @@ const Videos = () => {
                     </div>
                 </div>
 
-<div className="video_border">
-    <h3 className="video_title">Added Videos</h3>
-</div>
+                <div className="video_border">
+                    <h3 className="video_title">Added Videos</h3>
+                </div>
 
                 <div className="video_section2">
-                    
+
                     {/* <div className="video_border"> */}
                     <div className="video_section2-title">
                         <p className="video_section2-title-p1">Video</p>
@@ -44,7 +43,7 @@ const Videos = () => {
 
                     <div className="video_items">
                         <div className="video_items-title">
-                            <div className="video_items-title2"> 
+                            <div className="video_items-title2">
                                 <img height="50px" width="50px"></img>
                                 <p>name</p>
                             </div>
@@ -53,12 +52,11 @@ const Videos = () => {
                             <button className="video_items-btn1">edit</button>
                             <button className="video_items-btn2">delete</button>
                         </div>
-
+                    </div>
+                    <div className="video_pagination">
+                    <Pagination />
                     </div>
                     {/* </div> */}
-                </div>
-                <div className="video_pagination">
-                    <Pagination />
                 </div>
                 
             </div>

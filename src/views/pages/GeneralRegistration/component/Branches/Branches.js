@@ -1,14 +1,11 @@
 import { Pagination } from '@material-ui/lab'
 import React from 'react'
-import NavBar from '../NavBar/NavBar'
+import NavTab from "../NavTab/NavTab";
 
 const Branches = () => {
     return (
         <>
-            <NavBar />
-
             <h2>Branches</h2>
-
             <div className="Branches-container">
                 <h3 className="Branches-container_title">Add Branches</h3>
 
@@ -47,12 +44,10 @@ const Branches = () => {
                                 <button className="Branches-container_btn">Remove</button>
                             </div>
                         </div>
-                    <div className="Branches-container_pagination">
-                        <Pagination />
+                        <div className="Branches-container_pagination">
+                            <Pagination />
+                        </div>
                     </div>
-                    
-                    </div>
-                    
                 </div>
             </div>
         </>

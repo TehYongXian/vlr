@@ -1,10 +1,9 @@
 import React from 'react'
-import NavBar from '../NavBar/NavBar';
+import NavTab from "../NavTab/NavTab";
 
 const ProgramNCourses = () => {
     return (
         <>
-            <NavBar />
             <h2>Programs and Courses</h2>
             <div className="programNcourses">
 
@@ -26,7 +25,7 @@ const ProgramNCourses = () => {
                             &nbsp; Secondary
                         </div >
                         <div className="programNcourses_checkbox">
-                            <input type="checkbox"></input> 
+                            <input type="checkbox"></input>
                             &nbsp; Extension / Certificate / Diploma
                         </div>
                         <div className="programNcourses_checkbox">
@@ -47,8 +46,8 @@ const ProgramNCourses = () => {
                         </div>
                     </div>
 
+
                     <h2 className="programNcourses_title">Courses</h2>
-                    
                     <div className="programNcourses_section2">
                         What kind of programs do you offer to students?
 
@@ -85,9 +84,7 @@ const ProgramNCourses = () => {
                         </div>
                         <button className="programNcourses_btn">SAVE</button>
                     </div>
-
                 </div>
-
             </div>
         </>
     )

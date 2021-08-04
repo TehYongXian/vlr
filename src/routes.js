@@ -42,8 +42,8 @@ const Category = React.lazy(() => import('./views/pages/Category/Category'));
 const ShowCategory = React.lazy(() => import('./views/pages/showCategory/ShowCategory'));
 
 const GeneralRegistration = React.lazy(() => import('./views/pages/GeneralRegistration/GeneralRegistration'));
-const NavBar = React.lazy(() => import('./views/pages/GeneralRegistration/component/NavBar/NavBar'));
-const GeneralData = React.lazy(() => import('./views/pages/GeneralRegistration/component/General Data/GeneralData'));
+const NavTab = React.lazy(() => import('./views/pages/GeneralRegistration/component/NavTab/NavTab'));
+const GeneralData = React.lazy(() => import('./views/pages/GeneralRegistration/component/GeneralData/GeneralData'));
 const ProgramNCourses = React.lazy(() => import('./views/pages/GeneralRegistration/component/Program&Courses/ProgramNCourses'));
 const AlbumsNphotos = React.lazy(() => import('./views/pages/GeneralRegistration/component/AlbumsNPhotos/AlbumsNphotos'));
 const Branches = React.lazy(() => import('./views/pages/GeneralRegistration/component/Branches/Branches'));
@@ -96,7 +96,7 @@ const routes = [
   { path: '/showCategory', exact: true, name: 'Show Category', component: ShowCategory },
 
   { path: '/GeneralRegistration', exact: true, name: 'General Registration', component: GeneralRegistration },
-  { path: '/NavBar', exact: true, name: 'Nav Bar', component: NavBar },
+  { path: '/NavTab', exact: true, name: 'Nav Tab', component: NavTab },
   { path: '/GeneralData', exact: true, name: 'General Data', component: GeneralData },
   { path: '/ProgramNCourses', exact: true, name: 'Program & Courses', component: ProgramNCourses },
   { path: '/AlbumsNphotos', exact: true, name: 'Albums & photos', component: AlbumsNphotos },

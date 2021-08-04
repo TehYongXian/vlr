@@ -1,0 +1,39 @@
+{/* <div className="GeneralRegistration-NavBar">
+            <ul className="Nav-Bar">
+                <li className="nav-links">
+                    <div className="nav-links-btn">
+                        <Link exact to='/GeneralData' className="nav-links-a" active>
+                            General Data
+                        </Link>
+                    </div>
+                </li>
+                <li className="nav-links">
+                    <div className="nav-links-btn">
+                        <Link to='/ProgramNCourses' className="nav-links-a" active>
+                            <a >Programs & Courses </a>
+                        </Link>
+                    </div>
+                </li>
+                <li className="nav-links" >
+                    <div className="nav-links-btn">
+                        <Link to='/AlbumsNphotos' className="nav-links-a" active>
+                            <a >Albums & Photos </a>
+                        </Link>
+                    </div>
+                </li>
+                <li className="nav-links" >
+                    <div className="nav-links-btn">
+                        <Link to='/Branches' className="nav-links-a" active>
+                            <a >Branches </a>
+                        </Link>
+                    </div>
+                </li>
+                <li className="nav-links">
+                    <div className="nav-links-btn">
+                        <Link to='/Videos' className="nav-links-a" active>
+                            <a >Videos </a>
+                        </Link>
+                    </div>
+                </li>
+            </ul>
+            </div> */}
