@@ -30,82 +30,11 @@
 
 
 
-.Nav-Bar{
-    display: flex;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none;
-    justify-content: left;
-    text-align:justify;
-}
-.nav-links-btn{
-    border: none;
-    background-color:  #fffff9;
-}
-.nav-links-btn:active{
-    color: rgb(11, 133, 209);
-    padding-top: 5px;
-    border: none;
-    border-bottom: 2px solid rgb(11, 133, 209);
-    text-decoration: none;
-}
-.nav-links-btn.active:target{
-    color: rgb(11, 133, 209);
-    padding-top: 5px;
-    border: none;
-    border-bottom: 2px solid rgb(11, 133, 209);
-    text-decoration: none;
-}
-
-.nav-links-a{
-    color: black;
-    text-decoration: none;
-
-}
-.nav-links-a:hover{
-    color: black;
-    text-decoration: none;
-
-}
-// .nav-links-a:active{
-//     color: rgb(11, 133, 209);
-//     padding-top: 5px;
-//     border-bottom: 2px solid rgb(11, 133, 209);
-//     text-decoration: none;
-// }
-// .nav-links-a:after{
-//     color: rgb(11, 133, 209);
-//     padding-top: 5px;
-//     border-bottom: 2px solid rgb(11, 133, 209);
-//     text-decoration: none;
-// }
-// .nav-links-a:focus{
-//     color: rgb(11, 133, 209);
-//     padding-top: 5px;
-//     border-bottom: 2px solid rgb(11, 133, 209);
-//     text-decoration: none;
-// }
-
-
-
-.nav-links{
-    text-decoration: none;
-    max-height: 3rem;
-    font-size: 1rem;
-    margin-left: 1rem;
-    margin-top: 1rem;
-}
-
-.Link.active{
-    border-bottom: rgb(11, 133, 209);
-}
-
-
 
 // General Data
 .General-Data{
-    width: 750px;
+    width: 100%;
+    min-width: 752.8px;
     justify-content: center;
     display: flex;
     padding: 1rem;
@@ -176,7 +105,8 @@
 
 
 .programNcourses{
-    width: 750px;
+    width: 100%;
+    min-width: 752.8px;
     margin-top: 1rem;
     padding: 1rem;
     background-color: rgb(255, 255, 249);
@@ -243,7 +173,8 @@
 
 
 .AnP-container{
-    width: 750px;
+    width: 100%;
+    min-width: 752.8px;
     margin-top: 1rem;
     margin-left: 3rme;
     background-color: rgb(255, 255, 249);
@@ -337,12 +268,13 @@
 
 .AnP-picture-section{
     display: flex;
+    flex: 70%;
 }
 
 .AnP-picture-items{
     display: flex;
     margin-left: 10px;
-    flex: 60%;
+    flex: 30%;
 }
 
 .AnP-picture-itemsBtn{
@@ -385,7 +317,8 @@
 
 // Branches
 .Branches-container{
-    width: 750px;
+    width: 100%;
+    min-width: 752.8px;
     margin-top: 1rem;
     margin-left: 3rme;
     background-color: rgb(255, 255, 249);
@@ -464,13 +397,13 @@
 
     &_btn{
         height: 24px;
-        width: 4rem;
+        width: 6rem;
         border-radius: 0.25rem;
-        border: 1px solid rgb(44, 167, 255);
+        border: 1px solid rgb(255, 44, 44);
         text-align: center;
         vertical-align: middle;
-        background-color: rgb(44, 167, 255);
-        color: white;
+        background-color: rgb(255, 255, 255);
+        color: rgb(255, 44, 44);
     }
     
     &_pagination{
@@ -481,7 +414,8 @@
 }
 
 .video{
-    width: 750px;
+    width: 100%;
+    max-width: 752.8px;
     margin-top: 1rem;
     margin-left: 3rme;
     background-color: rgb(255, 255, 249);
