@@ -49,6 +49,20 @@ const AlbumsNphotos = React.lazy(() => import('./views/pages/GeneralRegistration
 const Branches = React.lazy(() => import('./views/pages/GeneralRegistration/component/Branches/Branches'));
 const Videos = React.lazy(() => import('./views/pages/GeneralRegistration/component/Videos/Videos'));
 
+const Product = React.lazy(() => import('./views/pages/Product/Product'));
+const SimpleProduct = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/SimpleProduct'));
+const AdvancePrice = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/AdvancePrice'));
+const AdvancedInventory = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/AdvancedInventory'));
+const CategoriesMultiSelect = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/CategoriesMultiSelect'));
+const NewCategory = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/NewCategory'));
+const ContryList = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/ContryList'));
+const AddVideo = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/AddVideo/AddVideo'));
+const SearchEngineOptimization = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/SearchEngineOptimization'));
+const AddSelectPro = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/RelatPro/AddSelectPro'));
+const AddUpSell = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/RelatPro/AddUpSell'));
+const CrossSell = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/RelatPro/CrossSell'));
+
+
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -102,6 +116,19 @@ const routes = [
   { path: '/AlbumsNphotos', exact: true, name: 'Albums & photos', component: AlbumsNphotos },
   { path: '/Branches', exact: true, name: 'Branches', component: Branches },
   { path: '/Videos', exact: true, name: 'Videos', component: Videos },
+
+  { path: '/Product', exact: true, name: 'Product', component: Product },
+  { path: '/SimpleProduct', exact: true, name: 'SimpleProduct', component: SimpleProduct },
+  { path: '/AdvancePrice', exact: true, name: 'AdvancePrice', component: AdvancePrice },
+  { path: '/AdvancedInventory', exact: true, name: 'AdvancedInventory', component: AdvancedInventory },
+  { path: '/CategoriesMultiSelect', exact: true, name: 'CategoriesMultiSelect', component: CategoriesMultiSelect },
+  { path: '/NewCategory', exact: true, name: 'NewCategory', component: NewCategory },
+  { path: '/ContryList', exact: true, name: 'ContryList', component: ContryList },
+  { path: '/AddVideo', exact: true, name: 'AddVideo', component: AddVideo },
+  { path: '/SearchEngineOptimization', exact: true, name: 'SearchEngineOptimization', component: SearchEngineOptimization },
+  { path: '/AddSelectPro', exact: true, name: 'AddSelectPro', component: AddSelectPro },
+  { path: '/AddUpSell', exact: true, name: 'AddUpSell', component: AddUpSell },
+  { path: '/CrossSell', exact: true, name: 'CrossSell', component: CrossSell },
 
 ];
 

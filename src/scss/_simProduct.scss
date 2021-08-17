@@ -1,0 +1,263 @@
+$placeholder-width: 105px;
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
+}
+
+.Done-btn{
+  float: right;
+  width: 60px;
+  height: 2rem;
+  background-color: rgb(255, 102, 0);
+  border: none;
+  color: white;
+
+  &:active{
+    background-color: rgb(255, 150, 0);
+  }
+}
+
+.Done-btn-div{
+  width: 100%;
+  height: 2rem;
+}
+
+.placeHolder-moneySim {
+    &:before {
+        content: attr(data-placeholder);
+        position: absolute;
+        color: #aaa;
+        width: $placeholder-width;
+        margin-left: 5px;
+    }
+
+}
+
+.fix-placeholder {
+  padding-left: $placeholder-width;
+  
+}
+
+.placeHolder-weight {
+    &:before {
+     
+        content: attr(data-placeholder);
+        position: absolute;
+        color: #aaa;
+        width: 23%;
+        text-align: end;
+    }
+}
+
+
+.fix-placeholder-weight {
+    // padding-left: $placeholder-width;
+    width: 80%;
+  }
+
+  .AdvancePrice-th {
+    color: black;
+    border: black solid 1px;
+  }
+  
+
+
+  .multiselect {
+    width: 200px;
+  }
+  
+  .selectBox {
+    position: relative;
+  }
+  
+  .selectBox select {
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  #checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+  }
+  
+  #checkboxes label {
+    display: block;
+  }
+  
+  #checkboxes label:hover {
+    background-color: #1e90ff;
+  }
+
+  .dropzone-input2{
+    margin-top: 2rem;
+    background-color: rgb(220, 220, 220);
+    border:rgb(114, 114, 114) dashed 1px;
+    height: 120px;
+    padding-bottom: 3rem;
+    width: 120px;
+}
+.dropzone-content2{
+  text-align: center;
+  justify-content: center;
+}
+
+.dragNdrop-camera{
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.SimpleProduct-container{
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  
+  &_left{
+    text-align: right;
+    flex: 40%;
+    height: 2.5rem;
+    margin-bottom: 2rem;
+    padding-right: 3rem;
+  }
+  &_left2{
+    text-align: left;
+    flex: 40%;
+    height: 2.5rem;
+    margin-bottom: 2rem;
+    padding-right: 3rem;
+  }
+
+  &_right{
+    gap: 10px;
+    display: flex;
+    flex: 60%;
+    float: right;
+    height: 2.5rem;
+  }
+  &_right2{
+    gap: 10px;
+    display: flex;
+    float: right;
+    height: 2.5rem;
+  }
+  &_right-noflex{
+    gap: 10px;
+    flex: 60%;
+    float: right;
+    height: 2.5rem;
+  }
+
+  &_p{
+    margin: 0;
+    margin-bottom: -5px;
+  }
+  &_small{
+    color: gray;
+  }
+
+  &_select{
+    height: 2rem;
+    width: 10rem;
+    float: right;
+    border-radius: 3px;
+  }
+  &_select2{
+    height: 2rem;
+    width: 11rem;
+    float: right;
+    border-radius: 3px;
+  }
+  &_input{
+    height: 2rem;
+    width: 100%;
+  }
+  &_textArea{
+    height: 3rem;
+    width: 20rem;
+  }
+  &_date{
+    height: 2rem;
+    width: 100%;
+  }
+  &_button{
+    border: none;
+    background-color: rgb(85, 85, 85);
+    color: white;
+    height: 2.2rem;
+  }
+  &_button1{
+    border: none;
+    background-color: rgb(85, 85, 85);
+    color: white;
+    height: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  &_a{
+    width: 9.5rem;
+
+  }
+
+  &_S1{
+    display: flex;
+    gap: 10px;
+  }
+  &_S2{
+    display: flex;
+    margin-bottom: 5rem;
+  }
+  &_S3{
+    display: flex;
+    margin-bottom: 5rem;
+  }
+  &_S4{
+    display: flex;
+    margin-bottom: 5rem;
+  }
+  &_S5{
+    display: flex;
+    margin-bottom: 5rem;
+  }
+  
+}
+
+.advancePrice-table{
+  width: 100%;
+
+  &_td{
+    border-top: white solid 1px;
+    border-bottom: white solid 1px;
+
+  }
+
+}
+
+.fix-placeholder .table-input{
+  width: 100%;
+}
+
+.table-input{
+  width: 100%;
+}
+.table-select{
+  width: 100%;
+}
+
+

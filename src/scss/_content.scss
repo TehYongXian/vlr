@@ -1,0 +1,76 @@
+.AddSelectPro-header{
+    gap: 10px;
+    height: 3rem;
+    width: auto;
+}
+.AddSelectPro-header-item{
+    float: right;
+    gap: 10px;
+    height: 3rem;
+    width: auto;
+    margin-left: 10px;
+}
+.AddSelectPro-header-item-button{
+    border: none;
+    background-color: orange;
+    height: 2rem;
+}
+
+.AddSelectPro-table-tool{
+    flex: 60%;
+    margin-bottom: 10px;
+
+}
+.AddSelectPro-table-tool2{
+    display: flex;
+    flex: 40%;
+    float: right;
+    margin-bottom: 10px;
+}
+.AddSelectPro-table-tool2-select{
+    height: 2rem;
+}
+
+.AddSelectPro-table-filter{
+    height: 3rem;
+}
+.AddSelectPro-table-filter-button{
+    float: right;
+}
+
+.AddSelectPro-container{
+    margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+
+.website-container{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.Downloadable-table{
+    margin-bottom: 36px;
+    width: 100%;
+}
+
+.downloadable-text{
+    margin-bottom: 36px;
+}
+
+.AddItem-table{
+    width: 45rem
+}
+
+.AddItem-table-select{
+    width: 5rem;
+}
+
+.AddItem-table-input{
+    width: 5rem;
+}
+
+.fix-placeholder .AddItem-table-input{
+    width: 5rem;
+}

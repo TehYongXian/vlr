@@ -1,0 +1,86 @@
+.Header-container{
+
+    // height: 2.8rem;
+    // float: right;
+}
+
+.Header-container-icon{
+    flex: 18%;
+    float: right;
+}
+.Header-container-title{
+    flex: 82%;
+}
+
+.Header-section1{
+    display: flex;
+}
+.Header-section2{
+    height: 38px;
+}
+
+.Header-section2-item{
+    float: right;
+}
+
+.Catalog-container-section2{
+    position: relative;
+    &_1{
+        position: relative;
+        display: flex;
+        margin-bottom: 25px;
+        height: 35px;
+        justify-content: right;
+        gap: 10px;
+    }
+    
+
+    &_2{
+        top: auto;
+        position: relative;
+        margin-bottom: 5px;
+        height: 35px;
+    }
+    &_2-1{
+        float: left;
+        display: flex;
+    }
+    &_2-2{
+        float: right;
+        display: flex;
+    }
+}
+
+
+.tableHead-catalog, th{
+    background-color: gray;
+    border: white 1px solid;
+    
+}
+
+.tableHead-catalog-table{
+    width: 100%;
+  border-collapse: collapse;
+}
+
+.Header2-section2{
+    height: 38px;
+    gap: 10px;
+}
+
+.Header2-section2-item{
+    float: right;
+}
+
+.Header-section2-item-back{
+    border: transparent;
+    margin-right: 10px;
+}
+
+.Header-section2-item-AddAtt{
+    margin-right: 10px;
+    border: transparent;
+    background-color: rgb(85, 85, 85);
+    color: white;
+    height: 35px;
+}

@@ -91,6 +91,8 @@
 }
 
 .dropzone-input{
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 2rem;
     background-color: rgb(220, 220, 220);
     border:rgb(114, 114, 114) dashed 1px;
