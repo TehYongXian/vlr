@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import AddItem from './component/addItem/AddItem'
 
 class AdvancePrice extends Component {
     state = {
@@ -56,58 +57,7 @@ class AdvancePrice extends Component {
                     </div>
 
                     <div >
-                        <table>
-                            <th className="AdvancePrice-th">Website</th>
-                            <th className="AdvancePrice-th">Customer Group</th>
-                            <th className="AdvancePrice-th">Quantity</th>
-                            <th className="AdvancePrice-th">Price</th>
-                            <tr>
-                            </tr>
-                            
-                        </table>
-                        {
-                            this.state.addInputField.map(() => {
-                                return (
-                                    <div >
-                                    <table className="advancePrice-table">
-                                        <tr>
-                                        <td className="advancePrice-table_td"> 
-                                            <p>Website</p>
-                                            <select className="table-select">
-                                                <option selected>
-                                                    All Websites [USD]
-                                                </option>
-                                            </select>
-                                        </td>
-         
-                                        
-                                        <td className="advancePrice-table_td">
-                                            <p>Customer Group</p>
-                                            <select className="table-select">
-                                                <option selected>
-                                                    ALL GROUPS
-                                                </option>
-                                            </select>
-                                        </td>
-                                        
-                                        <td className="advancePrice-table_td">
-                                            <p>Quantity</p>
-                                            <input className="table-input"></input>
-                                        </td>
-                                        <td className="advancePrice-table_td">
-                                            <p>Price</p>
-                                            <div className="placeHolder-moneySim" data-placeholder="$">
-                                                <input type="text" className="fix-placeholder table-input" ></input>
-                                            </div>
-                                        </td>
-                                        </tr>
-                                        </table>
-                                    </div>
-                                )
-                            })
-                        }
-                        <button onClick={(e) => this.addNewRow(e)}>Add</button>
-                        {/* press Add button create a new input */}
+                        <AddItem/>
                     </div>
                 </div>
                 <div className="SimpleProduct-container_S1">

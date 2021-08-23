@@ -1,15 +1,15 @@
 import React from "react"
 import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
 import options from "./CategoriesData"
-import Select from 'react-dropdown-select';
-
-
+import ReactSelect from 'react-select'
 
 const CategoriesMultiSelect = () => {
   return (
-      <ReactMultiSelectCheckboxes options={options}/>
+      <ReactSelect
+        isMulti
+        options={options}
+        />
   )
-  
 }
 
 export default CategoriesMultiSelect;

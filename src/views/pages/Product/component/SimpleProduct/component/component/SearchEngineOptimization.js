@@ -12,7 +12,7 @@ export default function SearchEngineOptimization() {
                     <small className="SimpleProduct-container_small">store view</small>
                 </div>
                 <div className="SimpleProduct-container_right">
-                    <input className="SimpleProduct-container_input"></input>
+                    <input id="URL_key" className="SimpleProduct-container_input"></input>
                 </div>
             </div>
             <div  className="SimpleProduct-container_S1">
@@ -21,7 +21,7 @@ export default function SearchEngineOptimization() {
                     <small className="SimpleProduct-container_small">store view</small>
                 </div>
                 <div className="SimpleProduct-container_right">
-                    <input className="SimpleProduct-container_input"></input>
+                    <input id="Meta_Title" className="SimpleProduct-container_input"></input>
                 </div>
             </div>
             <div  className="SimpleProduct-container_S1">
@@ -30,7 +30,7 @@ export default function SearchEngineOptimization() {
                     <small className="SimpleProduct-container_small">store view</small>
                 </div>
                 <div className="SimpleProduct-container_right">
-                    <textarea className="SimpleProduct-container_textArea"></textarea>
+                    <textarea id="Meta_Keywors" className="SimpleProduct-container_textArea"></textarea>
                 </div>
             </div>
             <div  className="SimpleProduct-container_S1">
@@ -39,7 +39,7 @@ export default function SearchEngineOptimization() {
                     <small className="SimpleProduct-container_small">store view</small>
                 </div>
                 <div className="SimpleProduct-container_right-noflex">
-                    <textarea className="SimpleProduct-container_textArea" maxLength="255"></textarea>
+                    <textarea id="Meta_Description" className="SimpleProduct-container_textArea" maxLength="255"></textarea>
                     <small>Maximum 255 chars. Meta Description should optimally be between 150=160 characters.</small>
                 </div>
             </div>

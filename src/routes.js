@@ -61,6 +61,9 @@ const SearchEngineOptimization = React.lazy(() => import('./views/pages/Product/
 const AddSelectPro = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/RelatPro/AddSelectPro'));
 const AddUpSell = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/RelatPro/AddUpSell'));
 const CrossSell = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/RelatPro/CrossSell'));
+const AddItem = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/addItem/AddItem'));
+const AddItem2 = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/addItem/AddItem2'));
+const Test = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/testing/Test'));
 
 
 
@@ -129,6 +132,10 @@ const routes = [
   { path: '/AddSelectPro', exact: true, name: 'AddSelectPro', component: AddSelectPro },
   { path: '/AddUpSell', exact: true, name: 'AddUpSell', component: AddUpSell },
   { path: '/CrossSell', exact: true, name: 'CrossSell', component: CrossSell },
+  { path: '/AddItem2', exact: true, name: 'AddItem2', component: AddItem2 },
+  { path: '/AddItem', exact: true, name: 'AddItem', component: AddItem },
+  { path: '/Test', exact: true, name: 'Test', component: Test },
+
 
 ];
 

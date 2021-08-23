@@ -13,8 +13,9 @@ import Dropzone from "./component/DropZone";
 import SearchEngineOptimization from "./component/SearchEngineOptimization"
 import RelatPro from "./RelatPro"
 
-import { Link } from '@material-ui/core';
-import AddItem from './component/addItem/AddItem';
+import { Link } from 'react-router-dom';
+import AddItem2 from './component/addItem/AddItem2';
+import AddPhoto from './component/AddVideo/AddPhoto';
 
 
 const Content = () => {
@@ -155,12 +156,15 @@ const Content = () => {
                         <CCollapse show={accordion === 3}>
                             <CCardBody>
                                 <div className="SimpleProduct-container_S4">
-                                    <div className="SimpleProduct-container_left">
-                                        <Dropzone />
+                                    <div className="SimpleProduct-container_left-addPhoto">
+                                        {/* <Dropzone /> */}
+                                        <AddPhoto/>
+
                                     </div>
                                     <div className="SimpleProduct-container_right2">
-                                        <Link to="/AddVideo"><button className="SimpleProduct-container_button">Add Video</button></Link>
+                                        <Link to="/AdvancedInventory"><button className="SimpleProduct-container_button">Add Video</button></Link>
                                     </div>
+
                                 </div>
                             </CCardBody>
                         </CCollapse>
@@ -257,7 +261,7 @@ const Content = () => {
                                             <small className="SimpleProduct-container_small">store view</small>
                                         </div>
                                         <div className="SimpleProduct-container_right">
-                                            <select className="SimpleProduct-container_select">
+                                            <select id="Layout_set" className="SimpleProduct-container_select">
                                                 <option selected>
                                                     No layout updates
                                                 </option>
@@ -285,7 +289,7 @@ const Content = () => {
                                             <small className="SimpleProduct-container_small">store view</small>
                                         </div>
                                         <div className="SimpleProduct-container_right">
-                                            <select className="SimpleProduct-container_select">
+                                            <select id="Display_Product" className="SimpleProduct-container_select">
                                                 <option selected>
                                                     Block after info Column
                                                 </option>
@@ -301,7 +305,7 @@ const Content = () => {
                                             <small className="SimpleProduct-container_right">store view</small>
                                         </div>
                                         <div className="SimpleProduct-container_right">
-                                            <textarea className="SimpleProduct-container_textArea"></textarea>
+                                            <textarea id="Layout_Update_XML" className="SimpleProduct-container_textArea"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -328,9 +332,9 @@ const Content = () => {
                                             <small className="SimpleProduct-container_small">[store view]</small>
                                         </div>
                                         <div className="SimpleProduct-container_right">
-                                            <input type="date"></input>
+                                            <input id="Schedule_Update_From" type="date"></input>
                                             <p>To</p>
-                                            <input type="date"></input>
+                                            <input id="Schedule_Update_To" type="date"></input>
                                         </div>
                                     </div>
                                     <div className="SimpleProduct-container_S1">
@@ -339,7 +343,7 @@ const Content = () => {
                                             <small className="SimpleProduct-container_small">[store view]</small>
                                         </div>
                                         <div className="SimpleProduct-container_right">
-                                            <select className="SimpleProduct-container_select">
+                                            <select id="New_Theme" className="SimpleProduct-container_select">
                                                 <option selected>
                                                     -- Please Select --
                                                 </option>
@@ -358,7 +362,7 @@ const Content = () => {
                                             <small className="SimpleProduct-container_small">[store view]</small>
                                         </div>
                                         <div className="SimpleProduct-container_right">
-                                            <select className="SimpleProduct-container_select">
+                                            <select id="New_Layout" className="SimpleProduct-container_select">
                                                 <option selected>
                                                     No layout updates
                                                 </option>
@@ -389,7 +393,7 @@ const Content = () => {
                                             <small className="SimpleProduct-container_small">[global]</small>
                                         </div>
                                         <div className="SimpleProduct-container_right">
-                                            <CSwitch className={'mx-1'} shape={'pill'} color={'success'} labelOn={'\u2713'} labelOff={'\u2715'} />
+                                            <CSwitch id="switch" className={'mx-1'} shape={'pill'} color={'success'} labelOn={'\u2713'} labelOff={'\u2715'} />
                                             <input type="checkbox" onChange={checkboxHandler} defaultChecked></input>
                                             <label>Use Config Settings</label>
                                         </div>
@@ -414,7 +418,7 @@ const Content = () => {
                             <CCardBody>
                                 <div className="SimpleProduct-container">
                                     <div className="SimpleProduct-container_S1">
-                                        <input type="checkbox"></input>
+                                        <input id="Downloadable_Product" type="checkbox"></input>
                                         <label>Is this Downloadable Product?</label>
                                     </div>
                                     <div
@@ -429,7 +433,7 @@ const Content = () => {
                                                 <small className="SimpleProduct-container_small">store view</small>
                                             </div>
                                             <div className="SimpleProduct-container_right">
-                                                <input className="SimpleProduct-container_input" placeholder="Links"></input>
+                                                <input id="Title" className="SimpleProduct-container_input" placeholder="Links"></input>
                                             </div>
                                         </div>
                                         <div className="SimpleProduct-container_S1">
@@ -437,24 +441,13 @@ const Content = () => {
                                                 <small className="SimpleProduct-container_small">[global]</small>
                                             </div>
                                             <div className="SimpleProduct-container_right">
-                                                <input type="checkbox"></input>
+                                                <input id="Seperate_link" type="checkbox"></input>
                                                 <label>Links can be purchased separately</label>
                                             </div>
                                             </div>
 
-                                            <div className="Downloadable-table">
-                                                {/* <table>
-                                                    <tr>
-                                                        <th>Title</th>
-                                                        <th>Price</th>
-                                                        <th>File</th>
-                                                        <th>Sample</th>
-                                                        <th>Shareable</th>
-                                                        <th>Max. Downloads</th>
-                                                    </tr>
-                                                </table> */}
-                                                <AddItem />
-                                            </div>
+                                            
+                                            <AddItem2 />
                                             <div>
                                                 <div className="downloadable-text"> 
                                                     Alphanumeric, dash and underscore charaters are recommended for filenames. Improper character are replaced with '_'.
@@ -468,7 +461,7 @@ const Content = () => {
                                                             <small className="SimpleProduct-container_small">store view</small>
                                                         </div>
                                                         <div className="SimpleProduct-container_right">
-                                                            <input className="SimpleProduct-container_input" placeholder="Samples"></input>
+                                                            <input id="Samples" className="SimpleProduct-container_input" placeholder="Samples"></input>
                                                         </div>
                                                     </div>
                                             </div>

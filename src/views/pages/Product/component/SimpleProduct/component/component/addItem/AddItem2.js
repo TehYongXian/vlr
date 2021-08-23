@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 
-class AddItem extends React.Component {
+class AddItem2 extends React.Component {
   state = {
     rows: [{}]
   };
@@ -37,7 +37,7 @@ class AddItem extends React.Component {
   render() {
     return (
       <div>
-        <div className="container2">
+        <div className="container">
           <div className="row clearfix">
             <div className="col-md-12 column">
               <table
@@ -46,69 +46,68 @@ class AddItem extends React.Component {
               >
                 <thead>
                   <tr>
-                    <th className="text-center"> Website </th>
-                    <th className="text-center"> Customer Group </th>
-                    <th className="text-center"> Quantity </th>
-                    <th className="text-center"> Price </th>
-                    <th className="text-center"> Action </th>
+                    <th className="text-center ">Title</th>
+                    <th className="text-center">Price</th>
+                    <th className="text-center">File</th>
+                    <th className="text-center">Sample</th>
+                    <th className="text-center">Shareable</th>
+                    <th className="text-center">Max. Downloads</th>
+                    <th className="text-center">Action</th>
+
                   </tr>
                 </thead>
                 <tbody>
                   {this.state.rows.map((item, idx) => (
                     <tr id="addr0" key={idx}>
-                      {/* <td>{idx}</td> */}
-                      {/* <td>
-                        <input
-                          type="text"
-                          name="name"
-                          value={this.state.rows[idx].name}
-                          onChange={this.handleChange(idx)}
-                          className="form-control"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="text"
-                          name="mobile"
-                          value={this.state.rows[idx].mobile}
-                          onChange={this.handleChange(idx)}
-                          className="form-control"
-                        />
-                      </td> */}
                       
+
                       <td className="AddItem-table_td">
-                        <p className="addItem-title2">Website</p>
-                        <select className="AddItem-table-select">
+                        <p className="addItem-title">Title</p>
+                        <select id="AddItem2_Title" className="AddItem-table-select">
                           <option selected>
                             All Websites [USD]
                           </option>
                         </select>
                       </td>
                       <td className="AddItem-table_td">
-                        <p className="addItem-title3">Customer Group</p>
-                        <select className="AddItem-table-select">
+                        <p className="addItem-title">Price</p>
+                        <select id="AddItem2_Price" className="AddItem-table-select">
                           <option selected>
                             ALL GROUPS
                           </option>
                         </select>
                       </td>
                       <td className="AddItem-table_td">
-                        <p className="addItem-title2">Quantity</p>
-                        <input className="addItem-input"></input>
+                        <p className="addItem-title">File</p>
+                        <input id="AddItem2_File" className="addItem-input"></input>
                         {/* <input className="fix-placeholder2 "></input> */}
                       </td>
                       <td className="AddItem-table_td">
-                        <p className="addItem-title2">Price</p>
+                        <p className="addItem-title">Sample</p>
                         <div className="placeHolder-moneySim2" data-placeholder="$">
-                          <input className="addItem-input"></input>
+                          <input id="AddItem2_Sample" className="addItem-input"></input>
                           {/* <input className="fix-placeholder2 " type="text" className="fix-placeholder" ></input> */}
+                        </div>
+                      </td>
+                      <td className="AddItem-table_td">
+                        <p className="addItem-title">Shareable</p>
+                        <div className="placeHolder-moneySim2" data-placeholder="$">
+                        <input id="AddItem2_Shareable" className="addItem-input"></input>
+                          {/* <input className="fix-placeholder2" type="text" className="fix-placeholder" ></input> */}
+                        </div>
+                      </td>
+                      <td className="AddItem-table_td">
+                        <p>Mac. Downloads</p>
+                        <div className="placeHolder-moneySim2" data-placeholder="$">
+                        <input id="AddItem2_Mac_Downloads" className="addItem-input"></input>
+                          {/* <input className="fix-placeholder2" type="text" className="fix-placeholder" ></input> */}
                         </div>
                       </td>
 
 
                       <td>
                         <button
-                          className="btn btn-outline-danger btn-sm addItem-btn"
+                          className="btn btn-outline-danger btn-sm"
                           onClick={this.handleRemoveSpecificRow(idx)}
                         >
                           Remove
@@ -135,4 +134,5 @@ class AddItem extends React.Component {
   }
 }
 
-export default AddItem
+export default AddItem2
+// render(<AddItem2 />, document.getElementById("root"));

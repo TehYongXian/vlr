@@ -1,4 +1,5 @@
 $placeholder-width: 105px;
+$placeholder-width2: 30px;
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: white;
@@ -41,11 +42,24 @@ $placeholder-width: 105px;
     }
 
 }
+.placeHolder-moneySim2 {
+    &:before {
+        content: attr(data-placeholder);
+        position: absolute;
+        color: #aaa;
+        width: 50px;
+        margin-left: 5px;
+        padding: 0;
+    }
+
+}
 
 .fix-placeholder {
   padding-left: $placeholder-width;
-  
 }
+// .fix-placeholder2 {
+//   padding-left: $placeholder-width2;
+// }
 
 .placeHolder-weight {
     &:before {
@@ -140,6 +154,13 @@ $placeholder-width: 105px;
     text-align: left;
     flex: 40%;
     height: 2.5rem;
+    margin-bottom: 2rem;
+    padding-right: 3rem;
+  }
+  &_left-addPhoto{
+    text-align: left;
+    flex: 40%;
+    height: auto;
     margin-bottom: 2rem;
     padding-right: 3rem;
   }
@@ -261,3 +282,11 @@ $placeholder-width: 105px;
 }
 
 
+
+.SimpleProduct-a{
+  text-decoration: none;
+}
+
+.ReactSelect{
+  width: 3rem;
+}
