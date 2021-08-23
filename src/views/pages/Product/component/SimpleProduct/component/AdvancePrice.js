@@ -7,17 +7,21 @@ class AdvancePrice extends Component {
         addInputField: []
     }
 
+    onTrigger = (event) => {
+        this.props.parentCallback("Data from child");
+        event.preventDefault();
+    }
+
     addNewRow() {
         this.setState({ addInputField: [...this.state.addInputField, ""] })
     }
     render() {
         return (
-            <div className="SimpleProduct-container">
-
-                <div className="Done-btn-div">
-                    <Link to="/SimpleProduct"><button className="Done-btn" >Done</button></Link>
+            <div className="AdvancePrice-container">
+                {/* <div className="Done-btn-div">
+                    <Link to="/SimpleProduct"><button value = "Submit" className="Done-btn" >Done</button></Link>
                 </div>
-                <hr />
+                <hr /> */}
                 <div className="SimpleProduct-container_S1">
                     <div className="SimpleProduct-container_left">
                         <p className="SimpleProduct-container_p">Speacial Price</p>
@@ -25,7 +29,7 @@ class AdvancePrice extends Component {
                     </div>
 
                     <div className="placeHolder-moneySim SimpleProduct-container_right" data-placeholder="$">
-                        <input type="text" className="fix-placeholder"></input>
+                        <input id="AP_Speacial_Price" type="number" className="fix-placeholder"></input>
                     </div>
                 </div>
                 <div className="SimpleProduct-container_S1">
@@ -34,9 +38,9 @@ class AdvancePrice extends Component {
                         <p className="SimpleProduct-container_p">Special Price From</p>
                     </div>
                     <div className="SimpleProduct-container_right">
-                        <input classname="AdvancePrice-date" type="date" value="" ></input>
+                        <input id="AP_Speacial_From" classname="AdvancePrice-date" type="date" value="" ></input>
                         <p>To</p>
-                        <input classname="AdvancePrice-date" type="date" value=""></input>
+                        <input id="AP_Speacial_To" classname="AdvancePrice-date" type="date" value=""></input>
                     </div>
 
                 </div>
@@ -47,7 +51,7 @@ class AdvancePrice extends Component {
                     </div>
 
                     <div className="placeHolder-moneySim SimpleProduct-container_right" data-placeholder="$">
-                        <input type="text" className="fix-placeholder"></input>
+                        <input id="AP_Cost" type="number" className="fix-placeholder"></input>
                     </div>
                 </div>
 
@@ -67,7 +71,7 @@ class AdvancePrice extends Component {
                     </div>
 
                     <div className="placeHolder-moneySim SimpleProduct-container_right" data-placeholder="$">
-                        <input type="text" className="fix-placeholder"></input>
+                        <input id="AP_MSRP" type="number" className="fix-placeholder"></input>
                     </div>
                 </div>
                 <div className="SimpleProduct-container_S1">
@@ -76,7 +80,7 @@ class AdvancePrice extends Component {
                         <small className="SimpleProduct-container_small">[website]</small>
                     </div>
                     <div className="SimpleProduct-container_right">
-                        <select>
+                        <select id="AP_DAP">
                             <option selected>
                                 Use config
                             </option>
@@ -84,7 +88,6 @@ class AdvancePrice extends Component {
                     </div>
 
                 </div>
-
             </div>
         )
     }

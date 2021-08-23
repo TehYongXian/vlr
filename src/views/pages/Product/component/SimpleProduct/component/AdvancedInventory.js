@@ -21,18 +21,18 @@ function AdvancedInventory() {
     }
 
     return (
-        <div className="SimpleProduct-container">
-            <div className="Done-btn-div">
+        <div className="AdvanceInventory-container">
+            {/* <div className="Done-btn-div">
                 <Link to="/SimpleProduct"><button className="Done-btn" >Done</button></Link>
             </div>
-            <hr />
+            <hr /> */}
             <div className="SimpleProduct-container_S1">
                 <div className="SimpleProduct-container_left">
                     <p className="SimpleProduct-container_p">Manage Stock</p>
                     <small className="SimpleProduct-container_small">[global]</small>
                 </div>
                 <div className="SimpleProduct-container_right">
-                    <select className="SimpleProduct-container_select" disabled={isSelected} setSelection>
+                    <select id="AI_Manage_Stock" className="SimpleProduct-container_select" disabled={isSelected} setSelection>
                         <option selected>
                             Yes
                         </option>
@@ -54,7 +54,7 @@ function AdvancedInventory() {
                 </div>
 
                 <div className="SimpleProduct-container_right">
-                    <input className="SimpleProduct-container_input"></input>
+                    <input id="AI_QTY" className="SimpleProduct-container_input"></input>
                 </div>
             </div>
 
@@ -63,7 +63,7 @@ function AdvancedInventory() {
                     <p className="SimpleProduct-container_p">Out-of-Stock Threshold</p>
                     <small className="SimpleProduct-container_small">[global]</small>
                 </div><div className="SimpleProduct-container_right">
-                    <input className="SimpleProduct-container_input" disabled={!isSelected2}></input>
+                    <input id="AI_OoST"className="SimpleProduct-container_input" disabled={!isSelected2}></input>
 
                     <input type="checkbox" onChange={checkboxHandler2} defaultChecked></input>
                     <p>Use Config Settings</p>
@@ -74,7 +74,7 @@ function AdvancedInventory() {
                     <p className="SimpleProduct-container_p">Minimum Qty Allowed in Shopping Cart</p>
                     <small className="SimpleProduct-container_small">[global]</small>
                 </div><div className="SimpleProduct-container_right">
-                    <input className="SimpleProduct-container_input" placeholder="1" value="1" disabled={!isSelected3}></input>
+                    <input id="AI_MinQAiSC" className="SimpleProduct-container_input" placeholder="1" value="1" disabled={!isSelected3}></input>
 
                     <input type="checkbox" onChange={checkboxHandler3} defaultChecked></input>
                     <p>Use Config Settings</p>
@@ -86,7 +86,7 @@ function AdvancedInventory() {
                     <small className="SimpleProduct-container_small">[global]</small>
                 </div>
                 <div className="SimpleProduct-container_right">
-                    <input className="SimpleProduct-container_input" placeholder="10000" value="10000" disabled={!isSelected4}></input>
+                    <input id="AI_MaxQAiSC" className="SimpleProduct-container_input" placeholder="10000" value="10000" disabled={!isSelected4}></input>
 
                     <input type="checkbox" onChange={checkboxHandler4} defaultChecked></input>
                     <p>Use Config Settings</p>
@@ -98,7 +98,7 @@ function AdvancedInventory() {
                     <small className="SimpleProduct-container_small">[global]</small>
                 </div>
                 <div className="SimpleProduct-container_right">
-                    <select className="SimpleProduct-container_select">
+                    <select id="AI_QUD" className="SimpleProduct-container_select">
                         <option selected>
                             No
                         </option>

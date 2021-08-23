@@ -13,6 +13,8 @@ class Header extends React.Component {
       super(props);
       this.saveDataAction = this.saveDataAction.bind(this);
     }
+
+    
   
     saveDataAction = () => {
 
@@ -24,8 +26,30 @@ class Header extends React.Component {
                     attribute_set: document.getElementById('attribute_set').value,
                     sku: document.getElementById('sku').value,
                     price: document.getElementById('price').value,
+                    Advance_Price: {
+                        Speacial_price: document.getElementById('AP_Speacial_Price').value,
+                        Speacial_price_From: document.getElementById('AP_Speacial_From').value,
+                        Speacial_price_To: document.getElementById('AP_Speacial_To').value,
+                        Cost: document.getElementById('AP_Cost').value,
+                        Tier_Price: {
+                            Website: document.getElementById('AP_website').value,
+                            Customer_Group: document.getElementById('AP_Customer_group').value,
+                            Quantity: document.getElementById('AP_Quantity').value,
+                            Price: document.getElementById('AP_Price').value,
+                        },
+                        Manufacturer_Suggested_Retail_Price: document.getElementById('AP_MSRP').value,
+                        Display_Actual_Price: document.getElementById('AP_DAP').value,
+                    },
                     tax_class: document.getElementById('tax_class').value,
                     quantity: document.getElementById('quantity').value,
+                    Advance_Inventory: {
+                        Manage_Stock: document.getElementById('AI_Manage_Stock').value,
+                        Quantity: document.getElementById('AI_QTY').value,
+                        Out_of_Stock_Threshold: document.getElementById('AI_OoST').value,
+                        Min_Qty_Allowed_in_Shopping_Cart: document.getElementById('AI_MinQAiSC').value,
+                        Max_Qty_Allowed_in_Shopping_Cart: document.getElementById('AI_MaxQAiSC').value,
+                        Qty_Uses_Decimals: document.getElementById('AI_QUD').value,
+                    },
                     stock_status: document.getElementById('stock_status').value,
                     weight: document.getElementById('weight').value,
                     categories: this.props.selectedCategoryOptions,

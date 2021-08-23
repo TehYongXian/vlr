@@ -56,29 +56,10 @@ class AddItem extends React.Component {
                 <tbody>
                   {this.state.rows.map((item, idx) => (
                     <tr id="addr0" key={idx}>
-                      {/* <td>{idx}</td> */}
-                      {/* <td>
-                        <input
-                          type="text"
-                          name="name"
-                          value={this.state.rows[idx].name}
-                          onChange={this.handleChange(idx)}
-                          className="form-control"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="text"
-                          name="mobile"
-                          value={this.state.rows[idx].mobile}
-                          onChange={this.handleChange(idx)}
-                          className="form-control"
-                        />
-                      </td> */}
-                      
+
                       <td className="AddItem-table_td">
                         <p className="addItem-title2">Website</p>
-                        <select className="AddItem-table-select">
+                        <select id="AP_website" className="AddItem-table-select">
                           <option selected>
                             All Websites [USD]
                           </option>
@@ -86,7 +67,7 @@ class AddItem extends React.Component {
                       </td>
                       <td className="AddItem-table_td">
                         <p className="addItem-title3">Customer Group</p>
-                        <select className="AddItem-table-select">
+                        <select id="AP_Customer_group" className="AddItem-table-select">
                           <option selected>
                             ALL GROUPS
                           </option>
@@ -94,13 +75,13 @@ class AddItem extends React.Component {
                       </td>
                       <td className="AddItem-table_td">
                         <p className="addItem-title2">Quantity</p>
-                        <input className="addItem-input"></input>
+                        <input id="AP_Quantity" className="addItem-input"></input>
                         {/* <input className="fix-placeholder2 "></input> */}
                       </td>
                       <td className="AddItem-table_td">
                         <p className="addItem-title2">Price</p>
                         <div className="placeHolder-moneySim2" data-placeholder="$">
-                          <input className="addItem-input"></input>
+                          <input id="AP_Price" className="addItem-input"></input>
                           {/* <input className="fix-placeholder2 " type="text" className="fix-placeholder" ></input> */}
                         </div>
                       </td>

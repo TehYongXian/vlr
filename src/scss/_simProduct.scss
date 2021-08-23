@@ -1,4 +1,4 @@
-$placeholder-width: 105px;
+$placeholder-width: 20px;
 $placeholder-width2: 30px;
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -57,9 +57,7 @@ $placeholder-width2: 30px;
 .fix-placeholder {
   padding-left: $placeholder-width;
 }
-// .fix-placeholder2 {
-//   padding-left: $placeholder-width2;
-// }
+
 
 .placeHolder-weight {
     &:before {
@@ -142,6 +140,7 @@ $placeholder-width2: 30px;
   margin: auto;
   width: 80%;
   padding: 10px;
+
   
   &_left{
     text-align: right;
@@ -182,7 +181,7 @@ $placeholder-width2: 30px;
     gap: 10px;
     flex: 60%;
     float: right;
-    height: 2.5rem;
+    height: auto;
   }
 
   &_p{
@@ -239,7 +238,9 @@ $placeholder-width2: 30px;
   &_S1{
     display: flex;
     gap: 10px;
+    height: auto;
   }
+ 
   &_S2{
     display: flex;
     margin-bottom: 5rem;
@@ -288,5 +289,35 @@ $placeholder-width2: 30px;
 }
 
 .ReactSelect{
-  width: 3rem;
+  width: 7rem;
+}
+
+.AdvancePrice-container{
+  margin: auto;
+  width: 90%;
+  // height: 35rem;
+  padding: 10px;
+  background-color: white;
+  margin-bottom: 2rem;
+  // display: none;
+
+}
+.AdvanceInventory-container{
+  margin: auto;
+  width: 90%;
+  // height: 35rem;
+  padding: 10px;
+  background-color: white;
+  margin-bottom: 2rem;
+  // display: none;
+
+}
+
+.showHide-btn{
+  border: none;
+  color: blue;
+}
+.showHide-btn:hover{
+  border: none;
+  color: rgb(61, 152, 255);
 }
