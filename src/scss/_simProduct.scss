@@ -58,15 +58,14 @@ $placeholder-width2: 30px;
   padding-left: $placeholder-width;
 }
 
-
 .placeHolder-weight {
     &:before {
-     
-        content: attr(data-placeholder);
-        position: absolute;
-        color: #aaa;
-        width: 23%;
-        text-align: end;
+      
+      content: attr(data-placeholder);
+      position: absolute;
+      color: #aaa;
+      width: $placeholder-width;
+      margin-left: 5px;
     }
 }
 
@@ -74,6 +73,7 @@ $placeholder-width2: 30px;
 .fix-placeholder-weight {
     // padding-left: $placeholder-width;
     width: 80%;
+    height: 25px;
   }
 
   .AdvancePrice-th {

@@ -34,9 +34,7 @@ class SimpleProduct extends React.Component {
         this.handleCategoryOptionsChange = this.handleCategoryOptionsChange.bind(this)
         this.handleCountryOptionsChange = this.handleCountryOptionsChange.bind(this)
     }
-    componentDidMount() {
 
-    }
     divstatus = (e) => {
         this.setState({ value: e.target.value });
     }
@@ -48,9 +46,7 @@ class SimpleProduct extends React.Component {
         this.setState({ selectedCountryOptions: selectedOptions2 });
     }
 
-    handleCallback = (AdvancePriceData) =>{
-        this.setState({data: AdvancePriceData})
-    }
+
 
 
 
@@ -200,7 +196,7 @@ class SimpleProduct extends React.Component {
                         </div>
 
 
-                        <div className="placeHolder-weight SimpleProduct-container_right" data-placeholder="lbs">
+                        <div className="placeHolder-weight SimpleProduct-container_right-noflex" data-placeholder="lbs">
                             <input id="weight"  min="0" className="fix-placeholder-weight SimpleProduct-container_input"></input>
                             <select className="SimpleProduct-container_select2" onChange={this.divstatus}>
                                 <option selected>

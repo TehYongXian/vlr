@@ -98,7 +98,7 @@ class Header extends React.Component {
             }, null, 4)],
             { type: "text/plain;charset=utf-8" }
         );
-        saveAs(blob, "static.txt");
+        saveAs(blob, "product.txt");
     };
   
     render() {
