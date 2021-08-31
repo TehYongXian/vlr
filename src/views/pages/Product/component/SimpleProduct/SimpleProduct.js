@@ -9,7 +9,7 @@ import CategoriesMultiSelect from './component/component/CategoriesMultiSelect'
 import ContryList from './component/component/ContryList'
 import Content from './component/Content'
 import Header2 from '../header/Header2'
-import { saveAs } from 'file-saver';
+
 import categoryOptions from './component/component/CategoriesData'
 import ReactSelect from 'react-select'
 
@@ -51,11 +51,11 @@ class SimpleProduct extends React.Component {
 
 
     render() {
-        const HandleChange = e =>{
-            this.setState({AdvanceShow: !this.state.AdvanceShow});
+        const HandleChange = e => {
+            this.setState({ AdvanceShow: !this.state.AdvanceShow });
         }
-        const HandleChange2 = e =>{
-            this.setState({AdvanceShow2: !this.state.AdvanceShow2});
+        const HandleChange2 = e => {
+            this.setState({ AdvanceShow2: !this.state.AdvanceShow2 });
         }
 
         return (
@@ -66,7 +66,7 @@ class SimpleProduct extends React.Component {
                     />
                 </div>
 
-                <input type = "submit" value = "Submit"/>
+                {/* <input type="submit" value="Submit" /> */}
 
                 <div className="SimpleProduct-container">
                     <div className="SimpleProduct-container_S1">
@@ -94,7 +94,7 @@ class SimpleProduct extends React.Component {
                     <div className="SimpleProduct-container_S1">
                         <div className="SimpleProduct-container_left">
                             <p className="SimpleProduct-container_p">Product Name</p>
-                            <small  className="SimpleProduct-container_small">[store view]</small>
+                            <small className="SimpleProduct-container_small">[store view]</small>
                         </div>
                         <div className="SimpleProduct-container_right">
                             <input id="name" className="SimpleProduct-container_input"></input>
@@ -115,27 +115,24 @@ class SimpleProduct extends React.Component {
                     </div>
                     <div>
                         <div className="SimpleProduct-container_S1">
-                        <div className="SimpleProduct-container_left">
-                            <p className="SimpleProduct-container_p">Price</p>
-                            <small className="SimpleProduct-container_small">[global]</small>
+                            <div className="SimpleProduct-container_left">
+                                <p className="SimpleProduct-container_p">Price</p>
+                                <small className="SimpleProduct-container_small">[global]</small>
+                            </div>
+
+                            <div className="placeHolder-moneySim SimpleProduct-container_right-noflex" data-placeholder="$">
+                                <input id="price" type="number" min="1" className="fix-placeholder SimpleProduct-container_input"></input>
+                                <button onClick={HandleChange} className="showHide-btn">{this.state.AdvanceShow ? 'Hide ' : 'Show '}Advanced Pricing</button>
+                            </div>
+
                         </div>
+                        {
+                            this.state.AdvanceShow ? <div><AdvancePrice /><h1>test</h1></div> : null
+                        }
 
-                        <div className="placeHolder-moneySim SimpleProduct-container_right-noflex" data-placeholder="$">
-                            <input id="price" type="number" min="1" className="fix-placeholder SimpleProduct-container_input"></input>
-                            {/* <Link className="SimpleProduct-a" to="/AdvancePrice"><a >Advanced Pricing</a></Link> */}
 
-                            <button onClick={HandleChange} className="showHide-btn">{ this.state.AdvanceShow? 'Hide ' : 'Show '}Advanced Pricing</button>
-
-                        </div> 
-                        
                     </div>
-                    {
-                    this.state.AdvanceShow? <div><AdvancePrice /><h1>test</h1></div> : null
-                  }
 
-                    
-                    </div>
-                    
                     <div className="SimpleProduct-container_S1">
                         <div className="SimpleProduct-container_left">
                             <p className="SimpleProduct-container_p">Tax Class</p>
@@ -154,24 +151,24 @@ class SimpleProduct extends React.Component {
 
                     </div>
                     <div>
-                         <div className="SimpleProduct-container_S1">
-                        <div className="SimpleProduct-container_left">
-                            <p className="SimpleProduct-container_p">Quantity</p>
-                            <small className="SimpleProduct-container_small">[global]</small>
-                        </div>
+                        <div className="SimpleProduct-container_S1">
+                            <div className="SimpleProduct-container_left">
+                                <p className="SimpleProduct-container_p">Quantity</p>
+                                <small className="SimpleProduct-container_small">[global]</small>
+                            </div>
 
-                        <div className="SimpleProduct-container_right-noflex">
-                            <input id="quantity" className="SimpleProduct-container_input" placeholder></input>
-                            <button onClick={HandleChange2} className="showHide-btn">{ this.state.AdvanceShow2? 'Hide ' : 'Show '}Advanced Inventory</button>
-                            
+                            <div className="SimpleProduct-container_right-noflex">
+                                <input id="quantity" className="SimpleProduct-container_input" placeholder></input>
+                                <button onClick={HandleChange2} className="showHide-btn">{this.state.AdvanceShow2 ? 'Hide ' : 'Show '}Advanced Inventory</button>
+
+                            </div>
                         </div>
+                        {
+                            this.state.AdvanceShow2 ? <div><AdvancedInventory /></div> : null
+                        }
+
                     </div>
-                    {
-                    this.state.AdvanceShow2? <div><AdvancedInventory/></div> : null
-                  }
-                    
-                    </div>
-                   
+
                     <div className="SimpleProduct-container_S1">
                         <div className="SimpleProduct-container_left">
                             <p className="SimpleProduct-container_p">Stock Status</p>
@@ -197,7 +194,7 @@ class SimpleProduct extends React.Component {
 
 
                         <div className="placeHolder-weight SimpleProduct-container_right-noflex" data-placeholder="lbs">
-                            <input id="weight"  min="0" className="fix-placeholder-weight SimpleProduct-container_input"></input>
+                            <input id="weight" min="0" className="fix-placeholder-weight SimpleProduct-container_input"></input>
                             <select className="SimpleProduct-container_select2" onChange={this.divstatus}>
                                 <option selected>
                                     This item has weight
@@ -217,20 +214,20 @@ class SimpleProduct extends React.Component {
 
 
                         {/* add checkbox selection */}
-                     
+
                         <div className="SimpleProduct-container_right">
-                        
-                        <ReactSelect
-                            className="ReactSelect"
-                            isMulti
-                            options={categoryOptions}
-                            value={this.state.selectedCategoryOptions}
-                            onChange={this.handleCategoryOptionsChange}
+
+                            <ReactSelect
+                                className="ReactSelect"
+                                isMulti
+                                options={categoryOptions}
+                                value={this.state.selectedCategoryOptions}
+                                onChange={this.handleCategoryOptionsChange}
                             />
 
-                        <Link to="/NewCategory"><button className="SimpleProduct-container_button">New Category</button></Link>
+                            <Link to="/NewCategory"><button className="SimpleProduct-container_button">New Category</button></Link>
                         </div>
-                        
+
                     </div>
                     <div className="SimpleProduct-container_S1">
                         <div className="SimpleProduct-container_left">
@@ -258,7 +255,7 @@ class SimpleProduct extends React.Component {
                         <div className="SimpleProduct-container_right">
                             <input id="new_from" className="SimpleProduct-container_date" type="date"></input>
                             <p>To</p>
-                            <input id="new_to"  className="SimpleProduct-container_date" type="date"></input>
+                            <input id="new_to" className="SimpleProduct-container_date" type="date"></input>
                         </div>
                     </div>
                     <div className="SimpleProduct-container_S1">
@@ -268,7 +265,7 @@ class SimpleProduct extends React.Component {
                         </div >
                         <div className="SimpleProduct-container_right">
 
-                            <ContryList 
+                            <ContryList
                             // options={categoryOptions}
                             // value={this.state.selectedCountryOptions}
                             // onChange={this.handleCountryOptionsChange}

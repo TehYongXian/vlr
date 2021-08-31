@@ -43,7 +43,7 @@ export default function Header() {
                             <CDropdownItem>Configurable Product</CDropdownItem>
                             <CDropdownItem>Grouped Product</CDropdownItem>
                             <CDropdownItem>Virtual Product</CDropdownItem>
-                            <CDropdownItem>Bundle Product</CDropdownItem>
+                            <CDropdownItem to="/BundledProducts">Bundle Product</CDropdownItem>
                             <CDropdownItem>Downloadable Product</CDropdownItem>
                         </CDropdownMenu>
                     </CDropdown>

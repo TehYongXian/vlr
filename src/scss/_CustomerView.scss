@@ -1,0 +1,229 @@
+.CV-containerHeader{
+    &_warning{
+        background-color: red;
+        text-align: center;
+    }
+    &_warning-small{
+        color: white;
+    }
+    &_info{
+        background-color: gray;
+        text-align: right;
+    }
+    &_info2{
+        display: flex;
+        text-align: right;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    &_info-p{
+        color: white;
+        margin-right: 4rem;
+    }
+    &_info-a{
+        color: white;
+        text-decoration: none;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    &_img{
+        flex: 80%;
+        // float: left;
+        align-items:flex-start;
+        justify-content: left;
+    }
+    &_logo{
+        float: left;
+        // align-self: flex-start;
+    }
+
+    &_search{
+        flex: 20%;
+        float: left;
+        // float: right;
+    }
+    &_search2{
+        gap: 10px;
+        display: flex;
+    }
+
+    &_btn-group{
+        background-color: rgb(213, 213, 213);
+        height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &_btn-group-btn{
+        border: none;
+        height: 2.5rem;
+        background-color: rgb(213, 213, 213);
+    }
+}
+
+.CV-coverPic{
+    background-image: url("https://resi.ze-robot.com/dl/4k/4k-desktop-wallpaper.-1920%C3%971080.jpg");
+    width:100%;
+    height: 300px;
+    margin-bottom: 2rem;
+
+    &_title{
+        background-color: white;
+        height: auto;
+        width: 23rem;
+        margin-top: 2rem;
+        margin-right: 2rem;
+        float: right;
+        padding: 2rem;
+        // justify-content: center;
+    }
+
+    &_btn{
+        margin-top: 2rem;
+        background-color: rgb(46, 161, 255);
+        border: none;
+        border-radius: 3px;
+        height: 2.3rem;
+        color: white;
+    }
+}
+
+.productSearchView-container{
+    // background-color: white;
+
+    &_title{
+        margin-bottom: 1rem;
+    }
+
+    &_content{
+        display: flex;
+        gap: 1rem;
+    }
+
+    &_content-left{
+        flex: 30%;
+    }
+    &_content-right{
+        flex: 70%;
+    }
+
+    &_sizeBtn{
+        width: 35px;
+        height: 30px;
+    }
+
+    &_content-header{
+        display: flex;
+        margin-bottom: 2rem;
+    }
+
+    &_content-header-left{
+        display: flex;
+        gap: 10px;
+        flex: 70%;
+    }
+    &_content-header-right{
+        display: flex;
+        gap: 10px;
+        float: right;
+        flex: 30%;
+    }
+
+    &_content-item-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        // padding: 1rem;
+        align-items: center;
+
+    }
+    &_content-item:hover{
+        border: black 1px solid;
+        
+        padding: 5px;
+        margin: 5px;
+        
+    }
+}
+
+.PV-container{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+
+    &_section2{
+        margin-top: 1rem;
+        display: flex;
+        gap: 2rem;
+    }
+    &_section2-1{
+        flex: 43%;
+    }
+    &_section2-2{
+        text-align: right;
+        flex: 70%;
+    }
+    &_section2-2-p{
+        margin-bottom: -5px;
+        flex: 60%;
+    }
+
+    &_btn1{
+        border: none;
+        background-color: rgb(28, 104, 255);
+        color: white;
+        height: 2.4rem;
+        border-radius: 3px;
+        margin-bottom: 2rem;
+    }
+    &_btn2{
+        border: none;
+        height: 2.4rem;
+        margin-bottom: 2rem;
+        color: rgb(148, 148, 148);
+    }
+    &_btn2:hover{
+        background-color: white;
+    }
+}
+
+.PV-container2-title{
+    margin-bottom: 2rem;
+}
+.PV-container2{
+    display: flex;
+    gap: 2rem;
+    
+
+    &_content2{
+        margin-bottom: 5px;
+        flex: 50%;
+    }
+    &_content3{
+        margin-bottom: 5px;
+        flex: 50%;
+    }
+    &_content2-b{
+        margin-bottom: 5px;
+        flex: 50%;
+    }
+
+    &_content2-input{
+        width: 3rem;
+    }
+
+    &_content2-select{
+        width: 12rem;
+        // margin-left: 1rem;
+    }
+
+    &_content3-btn{
+        border: none;
+        background-color: rgb(28, 104, 255);
+        color: white;
+        height: 2.4rem;
+        border-radius: 3px;
+        margin-bottom: 1.8rem;
+        margin-top: 1.8rem;
+    }
+}
+

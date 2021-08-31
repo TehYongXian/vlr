@@ -65,6 +65,12 @@ const AddItem = React.lazy(() => import('./views/pages/Product/component/SimpleP
 const AddItem2 = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/component/component/addItem/AddItem2'));
 const Test = React.lazy(() => import('./views/pages/Product/component/SimpleProduct/testing/Test'));
 
+const BundledProducts = React.lazy(() => import('./views/pages/Product/Bundled_Products/BundledProducts'));
+const BundledPage = React.lazy(() => import('./views/pages/Product/Bundled_Products/component/BundledPage'));
+const CustomerView = React.lazy(() => import('./views/pages/Product/Bundled_Products/component/CustomerView/CustomerView'));
+const productSearchView = React.lazy(() => import('./views/pages/Product/Bundled_Products/component/CustomerView/productSearchView'));
+const ProductView = React.lazy(() => import('./views/pages/Product/Bundled_Products/component/CustomerView/ProductView'));
+
 
 
 const routes = [
@@ -135,6 +141,12 @@ const routes = [
   { path: '/AddItem2', exact: true, name: 'AddItem2', component: AddItem2 },
   { path: '/AddItem', exact: true, name: 'AddItem', component: AddItem },
   { path: '/Test', exact: true, name: 'Test', component: Test },
+  
+  { path: '/BundledProducts', exact: true, name: 'BundledProducts', component: BundledProducts },
+  { path: '/BundledPage', exact: true, name: 'BundledPage', component: BundledPage },
+  { path: '/CustomerView', exact: true, name: 'CustomerView', component: CustomerView },
+  { path: '/productSearchView', exact: true, name: 'productSearchView', component: productSearchView },
+  { path: '/ProductView', exact: true, name: 'ProductView', component: ProductView },
 
 
 ];

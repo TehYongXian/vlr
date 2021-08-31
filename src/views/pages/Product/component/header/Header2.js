@@ -8,7 +8,7 @@ import {
     CButton,
 } from '@coreui/react'
 import { saveAs } from 'file-saver';
-class Header extends React.Component {
+class Header2 extends React.Component {
     constructor(props) {
       super(props);
       this.saveDataAction = this.saveDataAction.bind(this);
@@ -150,4 +150,4 @@ class Header extends React.Component {
     }
   }
 
-  export default Header
+  export default Header2
